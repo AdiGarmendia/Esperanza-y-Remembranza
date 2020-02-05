@@ -1,0 +1,11 @@
+html{
+  /* background-image: url('./images/nut.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+button:hover{
+background-color: black;
+color: white;
+}
