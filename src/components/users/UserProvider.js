@@ -45,7 +45,7 @@ export const UserProvider = (props) => {
             console.log("****  User APPLICATION STATE CHANGED  ****")
             console.log(users)
         },
-        [getUsers])
+        [users])
 
    
     return (
