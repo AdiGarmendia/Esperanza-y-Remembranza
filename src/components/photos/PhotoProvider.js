@@ -17,13 +17,13 @@ export const PhotoProvider = props => {
       .then(res => res.json())
       .then(setPhotos);
   };
-  const addPhoto = Photo => {
+  const addPhoto = photo => {
     return fetch("http://localhost:8088/photos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(Photo)
+      body: JSON.stringify(photo)
     }).then(getPhotos);
   };
 
