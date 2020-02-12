@@ -32,7 +32,7 @@ export default props => {
       <div className="notePhotos">
                 {
                     foundPhotoNotes.map(notePhoto => {
-                        return <NotePhoto key={notePhoto} notePhoto={notePhoto} {...props} />
+                        return <NotePhoto {...props} key={notePhoto.id} notePhoto={notePhoto} />
                     })
                 }
             </div>

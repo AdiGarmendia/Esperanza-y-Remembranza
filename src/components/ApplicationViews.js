@@ -38,6 +38,11 @@ export default props => {
               path="/Photos/Notes/:photoid(\d+)"
               render={props => <NotePhotoForm {...props} />}
             />
+            <Route
+              exact
+              path="/Photos/NoteEdit/:notePhotoId(\d+)"
+              render={props => <NotePhotoForm {...props} />}
+            />
 
             <Route
               path="/Photos/:photoid(\d+)"
