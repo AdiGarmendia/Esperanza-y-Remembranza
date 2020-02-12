@@ -9,11 +9,14 @@ export default (props) => {
     return (
         <>
             <h1>Photos</h1>
+            <button className="btn-photoCreate" onClick={() => {
+                    props.history.push("/Photos/Upload")
+                }}>Add Photos</button>
 
             <div className="photos">
                 {
                     photos.map(photo => {
-                        return <Photo key={photo.id} photo={photo} />
+                        return <Photo key={photo.id} photo={photo} {...props} />
                     })
                 }
             </div>
