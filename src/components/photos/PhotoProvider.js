@@ -27,8 +27,8 @@ export const PhotoProvider = props => {
     }).then(getPhotos);
   };
 
-  const deletePhoto = photoId => {
-    return fetch(`http://localhost:8088/photos/${photoId}`, {
+  const deletePhoto = photo => {
+    return fetch(`http://localhost:8088/photos/${photo.id}`, {
       method: "DELETE"
     }).then(getPhotos);
   };
