@@ -17,18 +17,18 @@ export const DocumentProvider = props => {
       .then(res => res.json())
       .then(setDocs);
   };
-  const addDoc = Doc => {
+  const addDoc = doc => {
     return fetch("http://localhost:8088/docs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(Doc)
+      body: JSON.stringify(doc)
     }).then(getDocs);
   };
 
-  const deleteDoc = DocId => {
-    return fetch(`http://localhost:8088/docs/${DocId}`, {
+  const deleteDoc = doc => {
+    return fetch(`http://localhost:8088/docs/${doc.id}`, {
       method: "DELETE"
     }).then(getDocs);
   };
@@ -41,10 +41,6 @@ export const DocumentProvider = props => {
     getDocs();
   }, []);
 
-  useEffect(() => {
-    console.log("****  Doc APPLICATION STATE CHANGED  ****");
-    console.log(docs);
-  }, []);
 
   return (
     <DocContext.Provider
