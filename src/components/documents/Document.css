@@ -1,0 +1,6 @@
+.family__pdfIcon {
+  background-image: url("./pdfPlaceHolder.png");
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+}

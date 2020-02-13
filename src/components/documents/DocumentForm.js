@@ -9,7 +9,6 @@ export default props => {
   const [URL, setURL] = useState("");
 
   const DocUploader = filename => {
-    console.log("filename", filename);
     firebase
       .storage()
       .ref("Documents")
@@ -31,7 +30,7 @@ export default props => {
         <form>
           <label><img src={URL} /></label>
           <FileUploader
-            accept="image/*"
+            accept="pdf/*"
             name="doc"
             filename={file => file.name.split(".")[0]}
             storageRef={firebase.storage().ref("Documents")}

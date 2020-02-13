@@ -10,12 +10,16 @@ import PhotoList from "./photos/PhotoList";
 import NotePhotoForm from "./notesPhotos/NotePhotoForm";
 import { NotePhotoProvider } from "./notesPhotos/NotePhotoProvider";
 import PhotoDetails from "./photos/PhotoDetails";
+import { NoteDocProvider } from "./notesDocuments/NoteDocumentProvider";
+import NoteDocumentForm from "./notesDocuments/NoteDocumentForm";
+import DocumentDetails from "./documents/DocumentDetails";
+import DocumentList from "./documents/DocumentList";
 
 export default props => {
   return (
     <>
       <UserProvider>
-        <Route exact path="/family" render={props => <UserList {...props} />} />
+        <Route exact path="/" render={props => <UserList {...props} />} />
       </UserProvider>
 
       <PhotoProvider>
@@ -53,11 +57,37 @@ export default props => {
       </PhotoProvider>
 
       <DocumentProvider>
-        <Route
-          exact
-          path="/Documents"
-          render={props => <DocumentForm {...props} />}
-        />
+        <UserProvider>
+          <NoteDocProvider>
+            <Route
+              exact
+              path="/Documents"
+              render={props => <DocumentList {...props} />}
+            />
+
+            <Route
+              exact
+              path="/Documents/Upload"
+              render={props => <DocumentForm {...props} />}
+            />
+
+            <Route
+              exact
+              path="/Documents/DocNote/:docid(\d+)"
+              render={props => <NoteDocumentForm {...props} />}
+            />
+            <Route
+              exact
+              path="/Documents/NoteDocEdit/:noteDocId(\d+)"
+              render={props => <NoteDocumentForm {...props} />}
+            />
+
+            <Route
+              path="/Documents/:docid(\d+)"
+              render={props => <DocumentDetails {...props} />}
+            />
+          </NoteDocProvider>
+        </UserProvider>
       </DocumentProvider>
     </>
   );
