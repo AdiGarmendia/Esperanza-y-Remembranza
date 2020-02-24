@@ -21,6 +21,7 @@ export default props => {
             userId: parseInt(localStorage.getItem("eyr_user")),
             photoURL: firebaseUrl
           })
+          .then(props.history.push("/Photos"))
         })
       
   };

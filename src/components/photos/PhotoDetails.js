@@ -20,7 +20,8 @@ export default props => {
   return (
     <section className="photo--photo">
       <div className={isActiveUser ? "act_user" : "photo_user"}></div>
-      <img className="family__Image" src={photo.photoURL} />
+      <div className="family__Details"><img className="family__DetailsPhoto" src={photo.photoURL} /></div>
+      <div className="notePhotos">
       <button
         className="btn--photoNote"
         onClick={() => {
@@ -29,7 +30,6 @@ export default props => {
       >
         Add Notes
       </button>
-      <div className="notePhotos">
                 {
                     foundPhotoNotes.map(notePhoto => {
                         return <NotePhoto {...props} key={notePhoto.id} notePhoto={notePhoto} />

@@ -5,21 +5,16 @@ import "./NavBar.css"
 export default (props) => {
     return (
         <>
+        <section className="navbar__Main">
         <h1 className="navbar__header">Esperanza y Remembranza</h1>
         <ul className="navbar">
-            <li className="navbar__item">
-                <Link className="navbar__link" to="/Family">Family</Link>
-            </li>
-            <li className="navbar__item">
+                <Link className="navbar__link" to="/">Family</Link>
                 <Link className="navbar__link" to="/Photos">Photos</Link>
-            </li>
-            <li className="navbar__item">
                 <Link className="navbar__link" to="/Documents">Documents</Link>
-            </li>
             
                 {
             localStorage.getItem("eyr_user")
-            ? <li className="navbar__item">
+            ? 
             <Link className="navbar__link"
                 to=""
                 onClick={e => {
@@ -28,10 +23,11 @@ export default (props) => {
                     props.history.push("/")
                 }}
                 >Log Out</Link>
-            </li>
+            
                 : ""
             }
         </ul>
+        </section>
         </>
     )
 }

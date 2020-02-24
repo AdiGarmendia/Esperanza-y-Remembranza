@@ -1,0 +1,101 @@
+root {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.photo--photo {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+
+
+
+.family__Details {
+  flex-direction: row;
+  justify-content: center;
+  height: 600px;
+  width: 850px;
+  overflow: scroll;
+
+
+}
+
+.family__DetailsPhoto {
+  margin-left: 15px;
+  width: 600px;
+}
+
+.family__Details::-webkit-scrollbar {
+  display: none;
+}
+
+
+.notePhotos {
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-direction: column;
+  padding: 3px;
+  margin: auto;
+  width: 500px;
+  height: 600px;
+  overflow: scroll;
+
+}
+
+.notePhotos::-webkit-scrollbar {
+  display: none;
+}
+
+.photo__Note {
+  max-width: 500px;
+  padding: 3px;
+  margin: 3px;
+  border-width: 12px;
+  border-style: groove;
+  border-color: rgba(121, 169, 223, 0.795);
+  border-radius: 5px 20px 20px 5px;
+  background-color: #fef2f2;
+}
+
+.notePhotoForm {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 850px;
+  max-height: 600px;
+  margin: auto;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.35);
+  background: #F1E4E8;
+  overflow: scroll;
+
+}
+.family__Image2 {
+  width: 650px;
+  height: auto;
+}
+
+.family__Image2::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.form-controlNotePhoto {
+  width: 494px;
+  height: 100px;
+}
+
+
+body#tinymce {
+  background: #ffffff;
+}

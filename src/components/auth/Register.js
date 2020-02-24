@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./Login.css";
+import "./Register.css";
 
 const Register = props => {
   const userName = useRef();
@@ -56,7 +56,7 @@ const Register = props => {
   };
 
   return (
-    <main style={{ textAlign: "center" }}>
+    <main className="container--register">
       <form className="form--login" onSubmit={handleRegister}>
         <h1 className="h3 mb-3 font-weight-normal">
           Please Register for Esperanza y Remembranza

@@ -58,22 +58,20 @@ export default (props, history) => {
   return (
     <form className="noteDocForm">
       <h2 className="noteDocForm__title">
-        {editMode ? "Edit noteDoc" : "Add noteDoc"}
+        {editMode ? "Edit Note" : "Add Note"}
       </h2>
-      <fieldset>
         <div className="form-group">
-          <label htmlFor="noteDocText">Notes: </label>
+          <label htmlFor="noteDocText"></label>
           <textarea
             name="noteDocText"
             required
-            className="form-control"
+            className="form-controlNoteDoc"
             proptype="varchar"
             placeholder=""
             defaultValue={noteDoc.noteDocText}
             onChange={handleControlledInputChange}
           ></textarea>
         </div>
-      </fieldset>
 
       <button
         type="submit"

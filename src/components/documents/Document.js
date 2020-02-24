@@ -29,6 +29,7 @@ export default ({ doc, history }) => {
       <div>
       <Link to={`/Documents/${doc.id}`}>
       <div className="family__pdfIcon"></div>
+      <div className="family__docName">{doc.docName}</div>
       </Link>
        {deleteDocButton}
       </div>

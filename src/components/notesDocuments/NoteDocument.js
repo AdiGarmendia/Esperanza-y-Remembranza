@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { DocContext } from "../documents/DocumentProvider";
 import { NoteDocContext } from "./NoteDocumentProvider";
+import "./NoteDocument.css";
 
 export default ({ noteDoc, history, match}) => {
   console.log(history, "history")

@@ -37,7 +37,7 @@ const Login = props => {
 
     return (
         <main className="container--login">
-            <section>
+            <section className="container--form">
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1 className="login_header">Esperanza y Remembranza</h1>
                     <h2>Please sign in</h2>
@@ -64,6 +64,7 @@ const Login = props => {
                     </fieldset>
                 </form>
             </section>
+            <br></br>
             <section className="link--register">
                 <Link to="/register">Not a member yet?</Link>
             </section>

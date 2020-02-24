@@ -61,22 +61,21 @@ export default (props, history) => {
   return (
     <form className="notePhotoForm">
       <h2 className="notePhotoForm__title">
-        {editMode ? "Edit notePhoto" : "Add notePhoto"}
+        {editMode ? "Edit Note" : "Scroll To Bottom"}
       </h2>
-      <fieldset>
+      <img className="family__Image2" src={photo.photoURL} />
         <div className="form-group">
-          <label htmlFor="notePhotoArea">Notes: </label>
+          <label htmlFor="notePhotoArea"></label>
           <textarea
             name="notePhotoArea"
             required
-            className="form-control"
+            className="form-controlNotePhoto"
             proptype="varchar"
             placeholder=""
             defaultValue={notePhoto.noteText}
             onChange={handleControlledInputChange}
           ></textarea>
         </div>
-      </fieldset>
 
       <button
         type="submit"
