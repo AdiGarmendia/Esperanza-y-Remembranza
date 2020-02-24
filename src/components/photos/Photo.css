@@ -1,3 +1,55 @@
-img{
-  max-width: 250px;
+root {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 600px;
+  overflow: scroll;
+  margin: auto;
+}
+
+.family__Photo {
+  display: flex;
+  flex-basis: 30%;
+  flex-direction: row;
+}
+
+.family__PhotoCard {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 3px;
+  margin: 5px;
+  border-width: 12px;
+  border-style: double;
+  border-color: rgba(121, 169, 223, 0.795);
+  border-radius: 5px 20px 20px 5px;
+  background-color: #fef2f2;
+}
+
+.family__Image {
+  flex-basis: 20%;
+  border-radius: 5px 10px 10px 5px;
+  width: 250px;
+  height: auto;
+}
+
+.family__Details {
+  border-radius: 5px 10px 10px 5px;
+  width: 500px;
+}
+body#tinymce {
+  background: #ffffff;
+
 }

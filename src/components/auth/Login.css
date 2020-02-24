@@ -1,0 +1,28 @@
+root {
+  display: flex;
+  justify-content: center;
+} 
+.container--login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 130px !important;
+  margin: auto;
+}
+
+.login--form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0.35);
+  background: #F1E4E8;
+}
+
+body#tinymce {
+  background: #ffffff;
+}

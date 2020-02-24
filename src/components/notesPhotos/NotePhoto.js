@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { NotePhotoContext } from "./NotePhotoProvider";
 import { PhotoContext } from "../photos/PhotoProvider";
+import "./NotePhoto.css";
+
 
 export default ({ notePhoto, history, match}) => {
   console.log(history, "history")

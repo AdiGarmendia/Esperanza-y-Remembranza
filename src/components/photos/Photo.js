@@ -26,7 +26,7 @@ export default ({ photo, history }) => {
   return (
     <section className="family__Photo">
       <div className={isActiveUser ? "act_user" : "photo_user"}></div>
-      <div>
+      <div className="family__PhotoCard">
       <Link to={`/Photos/${photo.id}`}>
         <img className="family__Image" src={photo.photoURL} /></Link>
        {deletePhotoButton}

@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  
+}
+
+html {
+  background-image: url("./components/EyR.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 code {

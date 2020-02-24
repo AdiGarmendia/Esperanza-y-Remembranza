@@ -18,8 +18,9 @@ export default props => {
           setURL(firebaseUrl)
           addDoc({
             userId: parseInt(localStorage.getItem("eyr_user")),
-            docURL: firebaseUrl
-          })
+            docURL: firebaseUrl,
+            docName: filename
+          }).then(props.history.push("/Documents"))
         })
       
   };
